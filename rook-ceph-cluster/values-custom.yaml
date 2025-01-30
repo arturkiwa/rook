@@ -7,7 +7,7 @@ kubeVersion:
 configOverride:
 toolbox:
   enabled: true
-  image: quay.docker.dev.pekao.com.pl/ceph/ceph:v19.2.0
+  image: quay.io/ceph/ceph:v19.2.0
   tolerations: []
   # -- Toolbox affinity
   affinity: {}
@@ -64,7 +64,7 @@ pspEnable: false
 # @default -- See [below](#ceph-cluster-spec)
 cephClusterSpec:
   cephVersion:
-    image: quay.docker.dev.pekao.com.pl/ceph/ceph:v19.2.0
+    image: quay.io/ceph/ceph:v19.2.0
     allowUnsupported: false
 
   dataDirHostPath: /var/lib/rook
@@ -178,42 +178,18 @@ cephClusterSpec:
     deviceFilter:
     config:
     nodes:
-    - name: "jenitw01"
+    - name: "k8snode-w01"
       devices:
-      - name: "/dev/disk/by-id/scsi-SQEMU_QEMU_HARDDISK_485237c8-914e-4faf-b6c4-2e192559604a"
-    - name: "jenitw02"
+      - name: "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_drive-scsi1"
+    - name: "k8snode-w02"
       devices:
-      - name: "/dev/disk/by-id/scsi-SQEMU_QEMU_HARDDISK_b7f5670c-6834-49ff-9ac0-1ac6c10075a8"
-    - name: "jenitw03"
+      - name: "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_drive-scsi1"
+    - name: "k8snode-w03"
       devices:
-      - name: "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_de54b2bc-4ffb-43a3-ad45-0687cd746a8b"
-    - name: "jenitw04"
+      - name: "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_drive-scsi1"
+    - name: "k8snode-w04"
       devices:
-      - name: "/dev/disk/by-id/scsi-SQEMU_QEMU_HARDDISK_09214569-cb66-4a27-96d3-2b8f73dc22f8"
-    - name: "jenitw05"
-      devices:
-      - name: "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_93f4f433-d4a5-4154-b5d7-e9f27b42fc30"
-    - name: "jenitw06"
-      devices:
-      - name: "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_1da72287-cd71-4fa7-b2ad-fe672c0ab358"
-    - name: "jenitw07"
-      devices:
-      - name: "/dev/disk/by-id/scsi-SQEMU_QEMU_HARDDISK_5c320ef6-1998-4320-88fe-d8a72ae0ff43"
-    - name: "jenitw08"
-      devices:
-      - name: "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_37b33365-85ee-4e6d-90d3-fe58555d5779"
-    - name: "jenitw09"
-      devices:
-      - name: "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_c4bcc832-6ccc-4b62-96f9-3f905fe6fe14"
-    - name: "jenitw10"
-      devices:
-      - name: "/dev/disk/by-id/scsi-SQEMU_QEMU_HARDDISK_3db2a510-b891-4f6f-9c43-14dfa573164b"
-    - name: "jenitw11"
-      devices:
-      - name: "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_f962a7cc-ff66-4a06-9081-05749e7a7b25"
-    - name: "jenitw12"
-      devices:
-      - name: "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_79dfda65-4126-41a4-a337-04e470bb4c5d"
+      - name: "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_drive-scsi1"
 
 
  
