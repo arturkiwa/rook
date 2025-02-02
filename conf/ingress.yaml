@@ -14,4 +14,4 @@ spec:
           service:
             name: rook-ceph-mgr-dashboard-external
             port:
-              number: 30100
+              number: 8443
